@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Register</title>
+    {% load static %}
+    <link rel="stylesheet" href="{% static 'css/customer/registerStyle.css'%}">
+    <script src="https://kit.fontawesome.com/c4254e24a8.js" crossorigin="anonymous"></script>
+</head>
+<body>
+  <div class="container">
+    <form action="/customer/save" method="POST">
+      {% csrf_token %}
+      <i class="fas fa-paper-plane"></i>
+
+      <div class="input-group">
+        <label>Full Name</label>
+        <input type="text" placeholder="Enter your name" id="contactName" onkeyup="validateName()" name="customerName"/>
+        <span id="name_error"></span>
+      </div>
+
+      <div class="input-group">
+        <label>Phone No.</label>
+        <input type="tel" placeholder="98..." id="contactPhone" onkeyup="validatePhone()" name="customerPhone"/>
+        <span id="phone_error"></span>
+      </div>
+
+
+      <div class="input-group">
+        <label>Address</label>
+        <textarea rows="3" placeholder="Enter your address" id="contactAddress" onkeyup="validateAddress()" name="customerAddress"></textarea>
+        <span id="address_error"></span>
+      </div>
+
+      <div class="input-group">
+        <label>Email</label>
+        <input type="email" placeholder="Enter Email"  id="contactEmail" required onkeyup="validateEmail()" name="customerEmail"/>
+        <span id="email_error"></span>
+      </div>
+      
+      <div class="input-group">
+        <label>Password</label>
+        <input type="password" placeholder="Enter Password"  id="contactPassword" required onkeyup="validatePassword()" name="customerPasw"/>
+        <span id="password_error"></span>
+      </div>
+
+      <div class="input-group">
+        <label>Confirm Password</label>
+        <input type="password" placeholder="Re-Type Password"  id="contactConfirmPassword" required onkeyup="validateConfirmPassword()"/>
+        <span id="confirmPassword_error"></span>
+      </div>
+
+    <button type="submit" class="R-button" onclick="validateForm()">Submit</button>
+    <span id="submit_error"></span>
+
+    <div class="signup-label">
+      <label>Already have an account? <span><a href="/customer/login">Log in</a></span></label>
+    </div>
+  
+   
+  </form>
+
+
+  
+  </div>
+  <script src="{% static 'js/registerValidate.js'%}"></script>
+   
+</body>
+</html>

@@ -1,0 +1,35 @@
+
+.edit-container{
+    /* margin-top: 10px; */
+    margin: auto;
+    width: 50%;
+    border: 2px solid gray;
+    padding: 10px;
+    /* height: 100vh; */
+}
+.heading-edit{
+    margin-left: 30%;
+}
+.edit-container button:hover{
+    background-color: black;
+}
+.edit-container label{
+    color: black;
+    font-size: large;
+}
+.edit-container input{
+    color: black;
+    font-size: large;
+}
+.button-sec button{
+    height: 40px;
+    margin-top: 30px;
+    border-radius: 20px;
+    width: 100px;
+}
+.submit{
+    margin-left: 30%;
+}
+.reset{
+    margin-left: 5%;
+}

@@ -1,0 +1,218 @@
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dashboard </title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    {% load static%}
+    <link rel="stylesheet" href="{% static 'css/dashboard/style.css'%}">
+</head>
+
+<body>
+    <div class="cont-section">
+        <section class="navigation">
+            
+            <ul>
+                <li>
+                    <a href="#">
+                        <span class="icon">
+                            <a class="navbar-brand" href="#"><span class="text-warning">VJ</span>Wears</a>
+                        </span>
+                       
+
+                    </a>
+                </li>
+                <li>
+                    <a href="/dashboard/dashboard">
+                        <span class="icon">
+                            <ion-icon name="home-outline"></ion-icon>
+                        </span>
+                        <span class="title">Dashboard</span>
+
+                    </a>
+                </li>
+                <li>
+                    <a href="/dashboard/customerdetail">
+                        <span class="icon">
+                            <ion-icon name="person-circle-outline"></ion-icon>
+                        </span>
+                        <span class="title">Customers</span>
+
+                    </a>
+                </li>
+                <li>
+                    <a href="/dashboard/productdetail">
+                        <span class="icon">
+                            <ion-icon name="chatbubbles-outline"></ion-icon>
+                        </span>
+                        <span class="title">Products</span>
+
+                    </a>
+                </li>
+                <li>
+                    <a href="/orderdetail/orders">
+                        <span class="icon">
+                            <ion-icon name="information-circle-outline"></ion-icon>
+                        </span>
+                        <span class="title">Orders</span>
+
+                    </a>
+                </li>
+                
+                
+                <li>
+                    <a href="/adminStaff/logout">
+                        <span class="icon">
+                            <ion-icon name="log-out-outline"></ion-icon>
+                        </span>
+                        <span class="title">Sing Out</span>
+                        
+
+                    </a>
+                </li>
+            </ul>
+        </section>
+        
+        <div class="main">
+            <nav class="topbar">
+                <div class="toggle">
+                    <ion-icon name="grid-outline"></ion-icon>
+                    
+                </div>
+                <div class="search">
+                    <label>
+                        <input type="text" placeholder="Search here">
+                        
+                    </label>
+                </div>
+                <div class="user">
+                    <img src="user1.jpg">
+                </div>
+            </nav>
+
+
+
+          
+            <!-- <div class="details">
+                <div class="recentOrders">
+                    <div class="cardHeader">
+                        <h2>
+                            Recent Orders
+                        </h2>
+                        <a href="#" class="btn">View All</a>
+                    </div>
+                    <table>
+                        <thead>
+                            <tr>
+                                <td>Name</td>
+                                <td>Price</td>
+                                <td>Payment</td>
+                                <td>Status</td>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>school bag</td>
+                                <td>Nrs 70</td>
+                                <td>paid</td>
+                                <td><span class="status delivered">Delivered</span></td>
+                            </tr>
+                            <tr>
+                                <td>collage bag</td>
+                                <td>Nrs 60</td>
+                                <td>due</td>
+                                <td><span class="status pending">panding</span></td>
+                            </tr>
+                            <tr>
+                                <td>Lady bag</td>
+                                <td>Nrs 50</td>
+                                <td>paid</td>
+                                <td><span class="status delivered">Delivered</span></td>
+                            </tr>
+                            <tr>
+                                <td>Men bag</td>
+                                <td>Nrs 90</td>
+                                <td>due</td>
+                                <td><span class="status inprogress">In Progress</span></td>
+                            </tr>
+                            <tr>
+                                <td>Traveller bag</td>
+                                <td>Nrs 80</td>
+                                <td>paid</td>
+                                <td><span class="status delivered">Delivered</span></td>
+                            </tr>
+                            <tr>
+                                <td>Fashion bag</td>
+                                <td> Nrs 200</td>
+                                <td>due</td>
+                                <td><span class="status pending">panding</span></td>
+                            </tr>
+
+                        </tbody>
+                    </table>
+                </div>
+               <div class="recentCustomers"> 
+                    <div class="cardHeader">
+                        <h2>Recent Customers</h2>
+                    </div>
+                    <table>
+                        <tr>
+                            <td width="60px"><div class="imgBx"><img src="image2.jpg"</div></td>
+                            <td><h4>RAj<br><span>Pokhara</span></h4></td>
+                        </tr>
+                        <tr>
+                            <td width="60px"><div class="imgBx"><img src="image3.jpg"</div></td>
+                            <td><h4>Robert<br><span>Janakpur</span></h4></td>
+                        </tr>
+                        <tr>
+                            <td width="60px"><div class="imgBx"><img src="image4.jpg"</div></td>
+                            <td><h4>Vijay<br><span>kathamandu</span></h4></td>
+                        </tr>
+                        <tr>
+                            <td width="60px"><div class="imgBx"><img src="image5.jpg.crdownload"</div></td>
+                            <td><h4>tank<br><span>Lahan</span></h4></td>
+                        </tr>
+                        <tr>
+                            <td width="60px"><div class="imgBx"><img src="image4.jpg"</div></td>
+                            <td><h4>Jawde<br><span>Sirha</span></h4></td>
+                        </tr>
+                        <tr>
+                            <td width="60px"><div class="imgBx"><img src="image3.jpg"</div></td>
+                            <td><h4>Aadity<br><span>Baneshor</span></h4></td>
+                        </tr>
+                    </table>
+                </div> -->
+
+                {% block dash %}
+                    
+                {% endblock dash %}
+            </div>
+        </div>
+    </div>
+    <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
+    <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
+    <script>
+        let toggle = document.querySelector('.toggle');
+        let navigation = document.querySelector('.navigation');
+        let main = document.querySelector('.main');
+        toggle.onclick = function () {
+            navigation.classList.toggle('active');
+            main.classList.toggle('active');
+
+
+        }
+        let list = document.querySelectorAll('.navigation li ');
+        function activeLink() {
+            List.forEach((item) =>
+                item.classList.remove('hovered'));
+            this.classList.add('hovered')
+        }
+        list.forEach((item) =>
+            item.addEventListener('mouseover,activeLink'));
+    </script>
+
+

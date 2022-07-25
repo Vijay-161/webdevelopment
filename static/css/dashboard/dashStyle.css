@@ -1,0 +1,26 @@
+.addCustomer{
+    margin-top: 20px;
+}
+.addCustomer a i{
+    font-size: 22px;
+    color: red;
+}
+.addCustomer button{
+    width: 100px;
+    height: 35px;
+    border: none;
+    background-color: black;
+    border-radius: 20px;
+    margin-left: 30px;
+
+}
+.addCustomer button:hover{
+    background-color: blue;
+}
+.addCustomer label{
+    padding: 5px;
+    font-size: large;
+    color: black;
+    
+}
+

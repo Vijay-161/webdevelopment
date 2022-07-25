@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dashboard </title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    {% load static%}
+    <link rel="stylesheet" href="{% static 'css/dashboard/style.css'%}">
+</head>
+
+<body>
+    <div class="cont-section">
+        <section class="navigation">
+            
+            <ul>
+                <li>
+                    <a href="#">
+                        <span class="icon">
+                            <a class="navbar-brand" href="#"><span class="text-warning">VJ</span>Wears</a>
+                        </span>
+                       
+
+                    </a>
+                </li>
+                <li>
+                    <a href="/dashboard/dashboard">
+                        <span class="icon">
+                            <ion-icon name="home-outline"></ion-icon>
+                        </span>
+                        <span class="title">Dashboard</span>
+
+                    </a>
+                </li>
+                <li>
+                    <a href="/dashboard/customerdetail">
+                        <span class="icon">
+                            <ion-icon name="person-circle-outline"></ion-icon>
+                        </span>
+                        <span class="title">Customers</span>
+
+                    </a>
+                </li>
+                <li>
+                    <a href="/dashboard/productdetail">
+                        <span class="icon">
+                            <ion-icon name="chatbubbles-outline"></ion-icon>
+                        </span>
+                        <span class="title">Products</span>
+
+                    </a>
+                </li>
+                <li>
+                    <a href="#">
+                        <span class="icon">
+                            <ion-icon name="information-circle-outline"></ion-icon>
+                        </span>
+                        <span class="title">Help</span>
+
+                    </a>
+                </li>
+                <li>
+                    <a href="#">
+                        <span class="icon">
+                            <ion-icon name="settings-outline"></ion-icon>
+                        </span>
+                        <span class="title">Settings</span>
+
+                    </a>
+                </li>
+                <li>
+                    <a href="#">
+                        <span class="icon">
+                            <ion-icon name="lock-open-outline"></ion-icon>
+                        </span>
+                        <span class="title">Password</span>
+
+                    </a>
+                </li>
+                <li>
+                    <a href="#">
+                        <span class="icon">
+                            <ion-icon name="log-out-outline"></ion-icon>
+                        </span>
+                        <span class="title">Sing Out</span>
+
+                    </a>
+                </li>
+            </ul>
+        </section>
+        
+        <div class="main">
+            <nav class="topbar">
+                <div class="toggle">
+                    <ion-icon name="grid-outline"></ion-icon>
+                    
+                </div>
+                <div class="search">
+                    <label>
+                        <input type="text" placeholder="Search here">
+                        
+                    </label>
+                </div>
+                <div class="user">
+                    <img src="user1.jpg">
+                </div>
+            </nav>
+                {% block content %}
+    
+                {% endblock content %}
+
+
+</div>
+</div>
+</body>
+</html>
+
